@@ -18,6 +18,9 @@ body {
     overflow: hidden;
 }
 .welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Recoleta', serif;
     font-size: 3.5em;
     color: #000;
