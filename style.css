@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Recoleta;
+    src: url(fonts/Recoleta-Black.ttf);
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    overflow: hidden;
+}
+.welcome {
+    font-family: 'Recoleta', serif;
+    font-size: 3.5em;
+    color: #000;
+    line-height: 1.1;
+}
