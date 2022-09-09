@@ -1,6 +1,14 @@
 @font-face {
+    font-family: Ohno Blazeface;
+    src: url(fonts/OhnoBlazeface-72PointItalic.ttf);
+}
+@font-face {
     font-family: Recoleta;
     src: url(fonts/Recoleta-Black.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter.ttf);
 }
 
 html {
@@ -13,16 +21,158 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: 'Inter', sans-serif;
+    width: 100%;
     font-size: 1em;
     overflow: hidden;
+    background-color: #dcd7d4;
+    font-family: 'Inter', sans-serif;
 }
-.welcome {
+header {
+    margin: 30px 0 0.5px;
+}
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Recoleta', serif;
-    font-size: 3.5em;
+    text-decoration: none;
+    font-family: 'Ohno Blazeface', sans-serif;
     color: #000;
+    font-size: 2.5em;
+    overflow: hidden;
+    background: linear-gradient(to right, blue, blue 50%, #000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.75s ease;
+}
+.header:hover {
+    background-position: 0 100%;
+}
+
+.slider {
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    color: #dcd7d4;
+    z-index: 1000;
+    border-right: 0.5px solid #000;
+}
+.title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    writing-mode: vertical-lr;
+    align-items: flex-end;
+    padding: 7rem 0.35rem 0 0;
+    transform: rotate(180deg);
+}
+.welcome {
+    display: flex;
+    margin: 0;
+    font-family: 'Ohno Blazeface', serif;
+    font-size: 6.5em;
+    color: black;
     line-height: 1.1;
 }
+.menu {
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+}
+.menu div {
+    padding: 2rem 0 0 2em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.menu_item {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    line-height: 1.1;
+}
+
+.article-container {
+    width: 100%;
+    margin: 10vh 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 25% 55% 1fr;
+    grid-template-rows: 1;
+}
+.article-sidebar {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.article-sidebar h5 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.sidebar-item {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.sidebar-item {
+    color: blue;
+}
+.article-main {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.article-title {
+    font-size: 4em;
+    line-height: 1.1;
+    margin: 0 auto 32px;
+    font-family: 'Ohno Blazeface', serif;
+}
+.article-main p {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px){ 
+    .slider {
+      height: 125px;
+      width: 100%; 
+      display: block;
+      position: relative;
+      padding: 1px;
+    }
+    .title {
+        width: 100%;
+        transform: none;
+        writing-mode: horizontal-tb;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .welcome {
+        font-size: 3.5em;
+    }
+    .menu {
+      margin-left: 0;
+      padding-top: 0;
+      width: 100%;
+    }
+    .menu div {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .article-container {
+        margin-top: 10vh;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .article-sidebar {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .article-main {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+  }
