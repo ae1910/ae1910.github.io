@@ -17,9 +17,9 @@ let dampening = 0.99;
 
 function setup() {
     pixelDensity(1);
-    var canvasDiv = document.getElementById('sketch-holder');
-    var width = canvasDiv.offsetWidth;
-    let canvas = createCanvas(700, 400);
+    let canvasDiv = document.getElementById('sketch-holder');
+    let width = canvasDiv.offsetWidth;
+    let canvas = createCanvas(width, 400);
     canvas.parent('sketch-holder');
     // https://stackoverflow.com/questions/37083287/how-to-set-canvas-width-height-using-parent-divs-attributes
 
@@ -46,9 +46,7 @@ function draw() {
                 2 -
             current[i][j];
             current[i][j] = current[i][j] * dampening;
-            // Unlike in Processing, the pixels array in p5.js has 4 entries
-            // for each pixel, so we have to multiply the index by 4 and then
-            // set the entries for each color component separately.
+            
             let index = (i + j * cols) * 4;
             pixels[index + 0] = current[i][j];
             pixels[index + 1] = current[i][j];
