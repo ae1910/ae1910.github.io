@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Comic Book Bold Italic;
+    src: url(fonts/Comic\ Book\ Bold\ Italic.otf);
+}
+@font-face {
+    font-family: Comic Book Bold;
+    src: url(fonts/Comic\ Book\ Bold.otf);
+}
+@font-face {
+    font-family: Comic Book Italic;
+    src: url(fonts/Comic\ Book\ Italic.otf);
+}
+@font-face {
+    font-family: Comic Book;
+    src: url(fonts/Comic\ Book.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.scroll-btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 2em;
+    margin: 30px auto 20px;
+}
+.scroll-btn span {
+    font-size: 18px;
+    color: #00f;
+    font-weight: 900;
+}
+#text-area {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#typed-text {
+    font-size: 2.5em;
+    text-align: center;
+}
