@@ -186,6 +186,10 @@ header {
 .p5Canvas {
     z-index: 10000;
 }
+picture {
+    width: 100%;
+    height: auto;
+}
 .examples {
     width: 100%;
     display: flex;
@@ -229,9 +233,9 @@ header {
     .article-sideitems {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        /* grid-auto-flow: column; */
     }
     .sidebar-item {
         display: flex;
