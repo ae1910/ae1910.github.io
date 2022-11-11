@@ -13,6 +13,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -166,6 +167,18 @@ ul.nav-list {
     flex-direction: column;
     flex-wrap: wrap;
 }
+.article-sideitems ul {
+    padding: 4px 0 4px 0.5rem;
+    margin: 0;
+    list-style: none;
+}
+.article-sideitems ul li {
+    padding: 4px 0 4px 0.85rem;
+    text-decoration: none;
+    list-style: none;
+    border-left: 2px solid #00f;
+    display: block;
+}
 .sidebar-item:hover {
     color: blue;
 }
@@ -266,6 +279,9 @@ picture {
     .sidebar-item {
         display: flex;
         flex-direction: column;
+    }
+    .article-sideitems ul{
+        display: none;
     }
     
   }
