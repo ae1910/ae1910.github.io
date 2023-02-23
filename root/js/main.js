@@ -35,7 +35,6 @@ parallax
             trigger: '.cls-2',
             scrub: true,
             start: 'top 10%',
-            markers: true,
             end: "85% top"
         },
         strokeDashoffset:0,
